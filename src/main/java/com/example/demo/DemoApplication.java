@@ -7,10 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-    public final UserService userService;
-    public DemoApplication(UserService userService) {
-        this.userService = userService;
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
@@ -20,7 +16,7 @@ public class DemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception{
-         userService.saveUser("Aniket is the user");
+
     }
 
 }
