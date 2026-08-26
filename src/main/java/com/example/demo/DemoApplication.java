@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-
+    public final UserService userService;
     public DemoApplication(UserService userService) {
         this.userService = userService;
     }
@@ -17,7 +17,7 @@ public class DemoApplication implements CommandLineRunner {
         System.out.println("Hello finally");
     }
 
-    public final UserService userService;
+
     @Override
     public void run(String... args) throws Exception{
          userService.saveUser("Aniket is the user");
