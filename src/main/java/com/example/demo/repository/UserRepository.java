@@ -34,4 +34,16 @@ public class UserRepository {
         users.add(user);
         return user;
     }
+
+    public UserDto update(CreateUserDto updateUserDto, String id) {
+        for(UserDto user:users){
+            if (user.getId().equals(id)){
+                user.setEmail(updateUserDto.getEmail());
+                user.setName(updateUserDto.getName());
+            }
+            return user;
+        }
+        return null;
+
+    }
 }

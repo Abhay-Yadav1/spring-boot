@@ -22,4 +22,9 @@ public class UserService {
     public UserDto createUser(CreateUserDto createUserDto){
         return userRepository.save(createUserDto);
     }
+
+    public UserDto updateUser(CreateUserDto updateUserDto, String id) {
+        if(userRepository.findById(id)==null)return null;
+        return userRepository.update(updateUserDto,id);
+    }
 }
