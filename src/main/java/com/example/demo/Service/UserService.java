@@ -27,4 +27,8 @@ public class UserService {
         if(userRepository.findById(id)==null)return null;
         return userRepository.update(updateUserDto,id);
     }
+
+    public void deleteUserById(String id) {
+        userRepository.deleteUserById(id);
+    }
 }
